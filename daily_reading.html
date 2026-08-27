@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="JAVASCRIPT/divination.js"></script>
+    <title>Cirrus' Cartomancy Cabin</title>
+    
+    <link href="style.css" rel="stylesheet" type="text/css" media="all">
+
+  </head>
+  <body>
+      <!-- HEADER / Navbar -->
+      <div class="mainHead">
+    
+        <h1 class="quirky">[        Floor ?        ]</h1>
+        
+        <div class="navContainer"> 
+          <button class="navLink"><a href="index.html">[0] Home</a></button>
+        </div>
+      </div>
+        <!-- END OF HEADER / Navbar -->
+        
+        <div class = "pageRow">
+          <div class = "characterCard">
+            <img src="ASSETS/Characters/Cirrus_normal.png" style="width:100%">
+            <p>[<b> Cirrus: </b><i>"Interested in a reading?" </i>]</p>
+              <div id="readDaily">
+                <button class="dailyReadButton" onclick="displayCard()" id="pullButton">PULL A CARD</button>
+                <button class="dailyReadButton" onclick="talkToCirrus()">"Who are you?"</button>
+              </div>
+          </div>
+
+          <div class = "cardInfo" id="readingContent">
+            <div id = "cardName">
+            </div>
+            <div id = "cardDesc">
+              <p>Click the button on the left to pull a card from the oracle deck!</p>
+            </div>
+            <div id = "cardKeywords">
+              <p>Keywords: <i>The gist of the card's meaning will be written here.</i></p>
+            </div>
+            <div id = "cardImg">
+              <img src="ASSETS/OracleDeck/1_THEANGEL.png" style="width:100%">
+            </div>
+          </div>
+
+          <div class="charYap HIDETHIS" id="talkingContent">
+            <p id="yapContent"></p>
+            <button id="opt1"></button>
+            <br>
+            <button id="opt2"></button>
+          </div>
+        </div>
+
+  </body>
+</html>

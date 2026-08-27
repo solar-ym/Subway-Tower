@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="JAVASCRIPT/coraxSpeech.js"></script>
+    <title>Forgotten Shelter</title>
+    <link href="style.css" rel="stylesheet" type="text/css" media="all">
+  </head>
+  
+  <body>
+    
+    <!-- HEADER / Navbar -->
+    <div class="mainHead">
+
+        <h1 class="quirky">[        Floor !!        ]</h1>
+      
+        <div class="navContainer"> 
+            <button class="navLink"><a href="index.html">[0] Home</a></button>
+        </div>
+        
+    </div>
+    
+    <!-- END OF HEADER / Navbar -->
+        
+        <div class = "centeredBoxes">
+            <div class = "characterCard" style="grid-column: 1 / span 1; height: fit-content; justify-self: center;">
+                <img src="ASSETS/Characters/Corax_normal.png" style="width:100%">
+                <p class="mysterious">[CORAX]</p>
+            </div>
+
+            <div class="charYap" id="talkingContent" style="grid-column: 2 / span 1;">
+                <p id="yapContent">Welcome to Floor !!. I am often referred to by the name "Corax". You could call me the equivalent of the Floor Director here, though we prefer not to use the terms employed by the inner Tower. I suppose you must be here seeking to learn more about the real "Creator" of this place. You can find that information somewhere in here if you go searching for it, but chatting with me may be a better use of your time than playing along with the tricks of some fool you cannot see. As for the Tower itself, I can think of a number of beings that would call themselves its creators—but none that would wish to make themselves known.
+                <br><br>Ah yes, I was asked to tell you something else. I’m not a real thing, and neither are you I suppose—but that allows us to communicate rather efficiently. On your right you should see a series of numbers and letters which will allow you to travel to any part of this conversation, though I wrote it in the Tower’s script. I’m sure you can find your own way around that.
+                </p>
+                <button id="opt1" onclick="proceed(2)">"I just want to know who made this place."</button>
+                <br>
+                <button id="opt2" onclick="proceed(3)">"Tell me about the other "Creators"."</button>
+            </div>
+
+            <div class="dialogueList" style="grid-column: 3 / span 1;">
+                <p>Dialogue List</p>
+                <ul>
+                    <li><button onclick="proceed(1)">1: START</button></li>
+                    <li><button onclick="proceed(2)">2: CREATION</button></li>
+                    <li><button onclick="proceed(3)">3: THE CONDUEX</button></li>
+                    <li><button onclick="proceed(4)">4: LONG GONE</button></li>
+                    <li><button onclick="proceed(5)">5: ABOUT SOMEONE</button></li>
+                    <li><button onclick="proceed(6)">6: SIN</button></li>
+                    <li><button onclick="proceed(7)">7: ENVY</button></li>
+                    <li><button onclick="proceed(8)">8: A LIBRARIAN</button></li>
+                    <li><button onclick="proceed(9)">9: WORD TO THE WISE</button></li>
+                    <li><button onclick="proceed(10)">10: TRAVEL</button></li>
+                    <li><button onclick="proceed(11)">11: LEVELS OF ESCAPISM</button></li>
+                    <li><button onclick="proceed(12)" id="realAboutMe">12: CLICK ME</button></li>
+                    <li><button onclick="proceed(13)">13: A BIT OF FUN</button></li>
+                    <li><button onclick="proceed(14)">14: YOU ALREADY KNOW</button></li>
+                    <li><button onclick="proceed(15)">15: BLOB</button></li>
+                    <li><button onclick="proceed(16)">16: EVENTUALLY</button></li>
+                </ul>
+            </div>
+        </div>
+    
+    
+  </body>
+
+</html>

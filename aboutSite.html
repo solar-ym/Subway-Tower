@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>About the Tower</title>
+    <link href="style.css" rel="stylesheet" type="text/css" media="all">
+    <script src="JAVASCRIPT/aboutSite.js"></script>
+  </head>
+  
+  <body class="meta">
+    
+    <div class="aboutSiteBarrier" id="BARRIER">
+        <!-- HEADER / Navbar -->
+        <div class="mainHead">
+            <h1 class="quirky">[        Floor -        ]</h1>
+        
+            <div class="navContainer"> 
+                <button class="navLink"><a href="index.html">[0] Home</a></button>
+            </div>
+        </div>
+
+        <img src="ASSETS/Other/AboutSiteStuff/intro1.png" class="aboutSiteIntroImg" id="introImg">
+    
+        <div class="typicalBox aboutSiteIntroBox">
+            <p id="textContent">You arrive at a dark hall. You think you see a crack of light ahead of you. You aren't sure how exactly you got here, either. This place is dark, and it's almost like that's all there is to it. The light beckons you.</p>
+            <div style="display: grid; grid-template-columns: 50% 50%; text-align: center;">
+                <button id="opt1" onclick="proceed(2)">Go forwards.</button>
+                <button id="opt2" onclick="proceed(3)">Look behind you.</button>
+            </div>
+        </div>
+
+        <button onclick="DispelBarrier()" class="sneakyText skipButton">skip intro</button>
+    </div>
+
+    <div class="AboutSiteContainer HIDETHIS" id="SITESCREEN">
+        <div class="aboutSiteSidebar aboutSiteSidebarLeft" style="grid-column: 1 / span 1;">
+            <div class="as_LeftSidebarBox">
+                <p>Link SUBWAY TOWER if you please :)</p>
+                <div style="justify-self: center;">
+                    <img src="ASSETS/SiteButtons/SUBWAYTOWER_v1.gif">
+                    <img src="ASSETS/SiteButtons/SUBWAYTOWER_V2.gif">
+                </div>
+                <code>
+                    &lt;a href="https://subwaytower.neocities.org/"&gt;&lt;img src="<filepath_here>">&lt&gt;/a&gt;
+                </code>
+                <p>(I recommend not hotlinking.)</p>
+            </div>
+            <div class="as_LeftSidebarBox" style="height: 59vh; overflow-y: scroll; scrollbar-width: thin;">
+                <p>Other cool sites I like: (beware flashing images/eyestrain for some)</p>
+                <ul>
+                    <li>
+                        <a href="https://omni.vi/"><img src="ASSETS/SiteButtons/others'/omni.gif"></a>
+                        <a href="https://daliwali.neocities.org/"><img src="ASSETS/SiteButtons/others'/daliwali.gif"></a>
+                    </li>
+                    <li>
+                        <a href="https://howsoonisnow.org/"><img src="ASSETS/SiteButtons/others'/howSoonIsNow.gif"></a>
+                        <a href="https://lupinus.neocities.org/"><img src="ASSETS/SiteButtons/others'/vampiresnestbutton1.gif"></a>
+                    </li>
+                    <li>
+                        <a href="https://bedr00mz.neocities.org/"><img src="ASSETS/SiteButtons/others'/Bedr00mZ_BUTT0N3-2023_Viktor_Tibay.gif"></a>
+                        <a href="https://bondiaries.neocities.org/"><img src="ASSETS/SiteButtons/others'/bondiaries1.png"></a>
+                    </li>
+                    <li>
+                        <a href="https://fauux.neocities.org/" title="EXTREME FLASHING BG WARNING"><img src="ASSETS/SiteButtons/others'/fauux-btn-01.gif"></a>
+                        <a href="https://lostlove.neocities.org/"><img src="ASSETS/SiteButtons/others'/lunospace.gif"></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="aboutSiteMainScreen" currentIndex="0" id="MAIN_SCREEN">
+            <div class="SCREEN asms_general" id="GENERAL">
+                <img src="ASSETS/UI/eleyevatorSymbolDigital.png" style="height: 200px; justify-self: center;">
+                <h1 class="casual">Welcome to the SUBWAY TOWER...</h1>
+                <h1 class="mysterious orangeDoubleBottom" style="font-size: large; margin-top: 0; color: white;">Welcome to the SUBWAY TOWER...</h1>
+
+                <p><span style="background-color: #FF4800;">Warning:</span> I love speaking in long paragraphs.</p>
+
+                <h2>What is this site about...</h2>
+                <p>SUBWAY TOWER is a story, a world, and a passion project that I made to combine all the ways that I love to experience interactive media. It's meant to be an interactive piece of fiction akin to text-based adventure games, but with a lil modern indie web flair.</p>
+                <p>It's also just a personal corner of the internet where I can do silly stuff with HTML/CSS/JS and escape from the corporate hell landscape that is the modern internet :P Unless stated otherwise, all art, writing, and code was made by me.</p>
+                <p>The story of SUBWAY TOWER features themes of unreality, philosophy, and mental struggles, but overall it wasn't really written to take itself seriously. I just like media that tries to break out of its own fictional chains. The site itself tells the story, not just what you see. There are going to be a lot of hidden little elements that you can only find if you really go searching. Of course, you don't need to do all that if you don't want to.</p>
+
+                <h2>General site info</h2>
+                <p>I have no plans to optimize this site for mobile with the exception of exactly one page (the divination one). Site looks best in Firefox and the only thing I bothered accounting for in other browsers is the scrollbar widths. I tried to account for different desktop screen sizes at least, but I can't guarrantee it will look good on every monitor.</p>
+
+                <h2>Work in progress forever :3</h2>
+                <p>The concept of the site makes it so that I can kinda keep on adding random shit indefinitely forever, and anything goes. I plan to continue adding stuff for as long as I have ideas (and time lol).</p>
+                <p>That said, tbh the main reason I made this site is literally just so I can access my oracle deck online anywhere. Most of my updates will probably just be improvements there as I think of features I want.</p>
+
+                <h2>Stuff I use</h2>
+                <p>Nothing on this webpage was made with gen-AI. I hate gen-AI. My thoughts on the larger AI discourse is broader than that, but point blank no generative AI will be used on this webpage EVER. I firmly believe that art and writing and creativity should not be reduced to products and endings alone. The journey <i>is</i> the art.</p>
+                <p>That said, we're in 2026 and I didn't manifest this website through sheer force of will. Here's all the things I use and plan to use:</p>
+                <h3>Graphics</h3>
+                <ul>
+                    <li>Ibis Paint X</li>
+                    <li>Krita</li>
+                    <li>Traditional mediums (edited via the above):
+                        <ul>
+                            <li>Acrylic marker</li>
+                            <li>Colored pencil</li>
+                            <li>Water color</li>
+                        </ul>
+                    </li>
+                    <li>The point of this site was to exercise my creative brain, so for the most part everything is drawn or (in the case of photographs) taken by me, with the exception of "meta" pages like this where I may show off other peoples' stamps, blinkies, and site buttons :)</li>
+                    <li><a href="https://ezgif.com/maker">EZ Gif</a> (for animated stamps and blinkies and stuff)</li>
+                </ul>
+                <h3>Fonts</h3>
+                <ul>
+                    <li>My custom font, <span class="mysterious">Subway Script</span>(Subway Script), was made with <a href="https://fontforge.org/en-US/">Font Forge</a>.</li>
+                    <li><a href="https://velvetyne.fr/">Velvetyne</a>
+                        <ul>
+                            <li><span class="casual">Avara</span></li>
+                            <li><span class="interesting">Basteleur</span></li>
+                            <li><span class="sleek">Lineal</span></li>
+                            <li><span class="quirky">Hyper Scrypt</span></li>
+                            <li><span class="digital">Terminal Grotesque</span></li>
+                        </ul>
+                    </li>
+                    <li><a href="https://www.theleagueofmoveabletype.com/">League of Moveable Type</a>
+                        <ul>
+                            <li><span class="solid">Blackout 2AM</span></li>
+                        </ul>
+                    </li>
+                    <li><a href="https://fonts.google.com/">Google Fonts</a>
+                        <ul>
+                            <li><span class="legendary">Lexend</span></li>
+                            <li><span class="predictable">Syne Mono</span></li>
+                        </ul>
+                    </li>
+                </ul>
+                <h3>Code</h3>
+                <ul>
+                    <li>VS Code</li>
+                    <li>Main ref/resource: <a href="https://www.w3schools.com/">W3Schools</a> my goat since age 12</li>
+                    <li>See my coding process is usually just knowing what to do and then doing it and if I don't know what to do I look at W3Schools or reddit or if all else fails, the documentation.</li>
+                </ul>
+                <h3>Writing</h3>
+                <ul>
+                    <li>Uh. Google Docs?</li>
+                    <li>Ok can I take the time to complain about how irritated I am that they removed the normal Google dictionary? Like, why the actual fuck do you need an AI to tell me the meaning of a word. Dictionaries are literally things that exist as a concept in the coding world because you simply LOOK UP A TERM and then GET ITS DEFINITION. And on top of that, now you can only get to the Word Coach mini-game by looking for it directly, which completely defeats the purpose of it. Horrible company horrible timeline horrible world every single stupid fucking tech-corp boot-licker that mindlessly allowed generative AI to infest the internet should genuinely genuinely be turned into cubes of flesh and eaten. At least then some of us could get some food.</li>
+                    <li>With the way things are going, maybe pen and paper and physical dictionary and thesaurus soon!</li>
+                </ul>
+            </div>
+
+            <div class="SCREEN asms_log HIDETHIS" id="UPDATE_LOG">
+                <h1>PLANNED UPDATES</h1>
+                <div class="asmsLogBox">
+                    <h2>About Me Page</h2>
+                    <p>Gonna finish the other sections of the (real) About Me page.</p>
+                </div>
+                <div class="asmsLogBox">
+                    <h2>About the Creator Page</h2>
+                    <p>Gonna add more dialogue for Corax.</p>
+                </div>
+                <div class="asmsLogBox">
+                    <h2>Divination Page</h2>
+                    <p>Gonna add more dialogue for Cirrus. I want to improve visuals for pulling cards and add options for how many cards to pull, showing meanings, etc.</p>
+                </div>
+                <h1>UPDATE LOG</h1>
+                <div class="asmsLogBox">
+                    <h2>Mh292026</h2>
+                    <p>Basically finished "About the Creator" page.</p>
+                </div>                
+                <div class="asmsLogBox">
+                    <h2>Mh182026 - Mh292026</h2>
+                    <p>Added "About the Creator" & "About Site" pages. Improved home screen. Resurrected site from the dead.</p>
+                </div>                
+            </div>
+
+            <div class="SCREEN asms_log HIDETHIS" id="FLOOR_DIR">
+                <h1>Floor Directory</h1>
+                <p>Here, you can find information on every "floor" of the SUBWAY TOWER as well as a link to the floor. This is not the same as the Site Map, which can be accessed on the right control panel.</p>
+                <p><br>A "floor" is like a mini-world within a world. They exist within the same "structure", but operate entirely different from each other.</p>
+                <h1>"Hidden" Floors</h1>
+                <div class="asmsLogBox">
+                    <h1>FLOOR - : About the Site</h1>
+                    <p>The current webpage. This is a "meta" page meant to be fairly easy to reach where you can find all sorts of info about the site, the story, and the world. You can skip the intro text sequence by using the invisible skip button on the bottom right corner of the initial page, which will turn visible upon hovering over it.</p>
+
+                    <h1><a href="aboutCreator.html">FLOOR !!</a> : About the Creator</h1>
+                    <p>This floor is home to the character Corax who expositions about the Tower lore. The "real" About Me page can be reached by clicking Dialogue 12 and finding another link in the dialogue there.</p>
+
+                    <h1><a href="daily_reading.html">FLOOR ?</a> : Cirrus' Cartomancy Cabin</h1>
+                    <p>This floor is home to the character Cirrus. This page was designed to be a place I can access my Oracle Deck from anywhere.</p>
+                </div>
+                <h1>Real Floors</h1>
+                <div class="asmsLogBox">
+                    <h1><a href="index.html">FLOOR 0</a> : Ground Floor</h1>
+                    <p>This floor is the "beginning" of the Tower, the first floor to ever be created. When Tower-Goers die, they often find themselves back here.</p>
+                    <h1>More Coming Soon</h1>
+                    <p>"Soon" used loosely.</p>
+                </div>
+            </div>
+
+            <div class="SCREEN asms_chars HIDETHIS" id="CHARACTERS">
+                <h1>CHARACTERS</h1>
+                <div class="asms_charsBox">
+                    <h1>CIRRUS | <span class="mysterious">CIRRUS</span></h1>
+                    <img src="ASSETS/Characters/Cirrus_normal.png">
+                    <p>An inhabitant of Floor ?, who manages a so-called "Cartomancy Cabin". He uses an oracle deck said to be made by one of First Conduex (<span class="obfuscatedText">"[MONARCH]", FROZEN SPRING</span>), though he does not need them to tell a person's fortune. with divination becoming an increasingly prosecuted activity in the Tower, he fled to the hidden floors.<span class="sneakyText">MY FAVE WEIRDO. HE LARPS AS A NORMAL PERSON. HE'S ALWAYS LYING AND SHIT, I NEED TO PLAY 5D CHESS WHENEVER I TALK TO HIM. NOT A BAD GUY, THO.</span></p>
+                </div>
+                <div class="asms_charsBox">
+                    <h1>CORAX | <span class="mysterious">CORAX</span></h1>
+                    <img src="ASSETS/Characters/Corax_normal.png">
+                    <p>The Floor Director of Floor !!. Once a well-respected Check-In Raven (<span class="obfuscatedText">LIBRARIAN</span>) of The Library. A "traveller" from beyond the confines of the Tower told him about the wonders of our reality, and he fell into madness. Eventually, he created Floor !! to be in peace, away from the prying eyes of The Conduex.<span class="sneakyText">MY GOOD FRIEND. HES GOTTEN OVER THE MADNESS THING ALREADY OK?? WE'RE GOOD :// THEY ALWAYS MAKE ME SOUND WACK!!</span></p>
+                </div>
+                <h1>BLINKIES</h1>
+                <div class="stampContainer" style="margin-bottom: 20px;">
+                    <img src="ASSETS/StampsEtc/ForFloors/cirrusBlinkie.gif" class="blinkie">
+                    <img src="ASSETS/StampsEtc/ForFloors/coraxBlinkie.gif" class="blinkie">
+                </div>
+            </div>
+
+            <div class="SCREEN asms_log HIDETHIS" id="SITEMAP">
+                <h1>Site Map</h1>
+                <p>I think the site is more fun to explore naturally, but in case you just want to have a quick and easy look around, here's the site map. (Note: Some pages are "Stacked together" like this one, where multiple "Screens" use one HTML file. In those cases, I'll try to provide a brief explanation on the easiest method to getting to different screens.</p>
+                <div class="asmsLogBox predictable">
+                    <ul>
+                        <li><a href="index.html">Floor 0/Home Page</a></li>
+                        <li><a href="aboutSite.html">Floor -/About Site</a> (There's a skip button on the bottom right of the intro screen)</li>
+                        <li><a href="aboutCreator.html">Floor !!/About the Creator</a>
+                            <ul>
+                                <li><a href="aboutMe.html">About Me</a> (The buttons on the upper right are used to switch between sections, and the middle drawing can be used to exit.)</li>
+                            </ul>
+                        </li>
+                        <li><a href="daily_reading.html">Floor ?/Daily Reading</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="SCREEN asms_general HIDETHIS" id="NAVTIPS">
+                <h1>Site Navigation Tips</h1>
+                <h1 class="mysterious orangeDoubleBottom" style="font-size: large; margin-top: 0; color: white;">Such as how to read this.</h1>
+                <p>This is mostly a reminder to myself of all the bs I did in the site, but also a handy list of things you can try while exploring the site to find all my silly little hidden things. I also understand that some might be less familiar with the ways of Obsessive Website Inspection, so here's a place to start for that too if you ever wanna find out how your favorite webmaster did something.</p>
+                <ul>
+                    <li>Inspect the code
+                        <ul>
+                            <li>
+                                Hit your F12 key (make sure the function [Fn] key is on if you're on laptop) to pull up the site HTML. This is a neat way of checking the raw text for things like the stuff written in the custom font, or even for finding text that's even more hidden.
+                            </li> 
+                            <li>
+                                I try not to hide things in a way where inspecting the code is the <i>only</i> way to find them, but I did design the site around the assumption that you could and would do this.
+                            </li>
+                            <li>(For new devs) This is also how you would debug your site and see why things might not be working as you intended. The Console tab will show you errors, warnings, and anything that you output with [console.log()]</li>
+                            <li>You can HOLD [Alt] and click one of the dropdown arrows to uncollapse <i>everything</i> inside a tag.</li>
+                        </ul>
+                    </li>
+                    <li>Hover over everything
+                        <ul>
+                            <li>There's a lot of hidden text that can only be seen hy hovering. If you ever see something in the HTML tagged "sneakyText" or "obfuscatedText", that means you can hover over it to see what it says :P</li>
+                            <li>
+                                There's also things like links that turn into a slightly different color when hovered over.
+                            </li>
+                        </ul>
+                    </li>
+                    <li>Copy paste the Tower Script text somewhere else
+                        <ul>
+                            <li>
+                                One of the main reasons I used a custom font instead of images for the Tower Script is so you could also just highlight it and copy paste it somewhere else to see the raw text.
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <p>This page will be edited as I add more things :)</p>
+                <h2>The Subway Tower Script</h2>
+                <img src="ASSETS/Other/AboutSiteStuff/subwayScriptGuide.png" style="width: 100%;">
+                <p>I "designed" (if you can even call it that) this when I was like. 14. It was part of a series of one-to-one latin letter scripts that were peculiarly shaped. This one was the "Square" script, and all of these are actually meant to be (and are much more legible when) encased in a square. Unfortunately, I was motivated enough to make a font but apparently not enough to include the actual square. Hence we have this.</p>
+                <p>I <i>am</i> planning to #eventually make a version with the proper squares, but this font breaks enough font-making standards as is.</p>
+            </div>
+
+            <div class="SCREEN asms_general HIDETHIS" id="GUESTBOOK">
+                <h1 class="orangeDoubleBottom">Sign the <a href="https://subwaytower.atabook.org/">Guest Book</a>!</h1>
+                <iframe src="https://subwaytower.atabook.org/#compose" class="gb_composeBox"></iframe>
+                <p>You can say anything. Free world out here. <a href="https://atabook.org/" >Atabook</a> was used for this, the link in the title will take you to my guestbook page directly :)</p>
+            </div>
+        </div>
+
+        <div class="aboutSiteSidebar" style="grid-column: 3 / span 1;">
+            <img src="ASSETS/UI/eleyevatorSymbol.png" style="height: 150px; position: absolute; right: 3%; top: 10px; animation: beWatchful 7s ease-in-out 1s infinite alternate-reverse;">
+            <h1 style="margin-top: 50%;">Navigate</h1>
+
+            <button class="as_button" onclick="ChangeScreen(0)">General</button>
+            <button class="as_button" onclick="ChangeScreen(1)">Update Log</button>
+            <button class="as_button" onclick="ChangeScreen(2)">Floor Directory</button>
+            <button class="as_button" onclick="ChangeScreen(3)">Characters</button>
+            <button class="as_button" onclick="ChangeScreen(4)">Site Map/Index</button>
+            <button class="as_button" onclick="ChangeScreen(5)">Site Nav Tips</button>
+            <button class="as_button" onclick="ChangeScreen(6)">Guestbook!</button>
+
+            <button class="as_button as_button2" onclick="window.location.href='index.html'">Back to home...</button>
+        </div>
+    </div>
+  </body>
+
+</html>
