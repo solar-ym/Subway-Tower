@@ -24,25 +24,41 @@
         <div class = "pageRow">
           <div class = "characterCard">
             <img src="ASSETS/Characters/Cirrus_normal.png" style="width:100%">
-            <p>[<b> Cirrus: </b><i>"Interested in a reading?" </i>]</p>
+            <p id="cirrusSmallChat">[<b> Cirrus: </b><i>"Interested in a reading?" </i>]</p>
               <div id="readDaily">
-                <button class="dailyReadButton" onclick="displayCard()" id="pullButton">PULL A CARD</button>
+                <button class="dailyReadButton" onclick="cardReadOn()" id="pullButton">PULL A CARD</button>
+                <button class="dailyReadButton" onclick="EmptyTable()">"Can you clear the table..."</button>
                 <button class="dailyReadButton" onclick="talkToCirrus()">"Who are you?"</button>
               </div>
           </div>
 
           <div class = "cardInfo" id="readingContent">
-            <div id = "cardName">
+            <div class="cardTable">
+              <img src="ASSETS/OracleDeck/0_BACK.png" id="CT_deckPull" onclick="AddCardToTable()">
+              <div id = "ct_cardList">
+
+              </div>
             </div>
-            <div id = "cardDesc">
-              <p>Click the button on the left to pull a card from the oracle deck!</p>
-            </div>
-            <div id = "cardKeywords">
-              <p>Keywords: <i>The gist of the card's meaning will be written here.</i></p>
-            </div>
-            <div id = "cardImg">
-              <img src="ASSETS/OracleDeck/1_THEANGEL.png" style="width:100%">
-            </div>
+
+            <div class="cardCodex" id="ct_CardCodex">
+              <!-- Card info -->
+              <div id = "cardImg">
+                <img src="ASSETS/OracleDeck/0_BACK.png">
+              </div>
+              
+              <div id = "cardName">
+              </div>
+
+              <div id = "cardKeywords">
+                <p>Keywords: <i>The gist of the card's meaning will be written here.</i></p>
+              </div>
+
+              <div id = "cardDesc">
+                <p>Click the button on the upper left to pull a card from the oracle deck! You can drag cards into whatever formation you'd like. To open a card, right click it.</p>
+              </div>
+              
+              
+              </div>
           </div>
 
           <div class="charYap HIDETHIS" id="talkingContent">

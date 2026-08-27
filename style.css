@@ -259,6 +259,7 @@ body.meta {
 }
 
 .cardInfo {
+    height: 70vh;
   box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.8);
   margin: 10px;
   text-align: center;
@@ -266,6 +267,16 @@ body.meta {
 
   display: grid;
   grid-template-columns: 70% 30%;
+}
+
+.cardCodex {
+    height: 100%;
+    overflow-y: scroll;
+    border-left: 1px solid rgb(41, 41, 41);
+    display: flexbox;
+    flex-wrap: nowrap;
+
+    animation: ct_FadeIn 3s;
 }
 
 .charYap {
@@ -300,14 +311,14 @@ body.meta {
 
 #cardName {
     font-family: hyperScrypt;
-    margin-left: 10px;
-    text-align: left;
+    margin: 10px;
+    text-align: center;
     align-self: self-start;
 }
 
 #cardDesc {
     padding: 5px;
-    margin-left: 10px;
+    margin: 10px;
     text-align: justify;
     align-self: self-start;
     white-space: pre-wrap;
@@ -320,10 +331,16 @@ body.meta {
 }
 
 #cardImg {
-    max-width: 300px;
-    grid-column-start: 2;
-    grid-row: 1/span 3;
-    justify-self: end;
+    height: 57%;
+    align-self: center;
+    justify-self: center;
+    border-bottom: 1px solid white;
+}
+
+#cardImg img {
+    width: 50%;
+    align-self: center;
+    justify-self: center;
 }
 
 #readDaily {
@@ -353,6 +370,42 @@ body.meta {
 .dailyReadButton:hover{
     color: #a3e5ff;
     cursor: pointer;
+}
+
+#CT_deckPull {
+    width: 8%;
+    justify-self: left;
+    position: relative;
+    right: 45%;
+    top: 1%;
+}
+
+#CT_deckPull:hover {
+    filter: brightness(70%);
+    cursor: pointer;
+}
+
+.interactableCard {
+    width: 4.5%;
+    position: absolute;
+}
+
+.interactableCard img {
+    width: 100%;
+}
+
+.interactableCard:hover {
+    filter: invert();
+    cursor: crosshair;
+}
+
+@keyframes ct_FadeIn {
+    from {
+        color: black;
+    }
+    to {
+        color: white;
+    }
 }
 
 /* ABOUT ------------------------------------------- */

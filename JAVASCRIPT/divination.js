@@ -171,29 +171,128 @@ const Dusk = {
 const oracleDeckArr = [TheAngel, DevourerofGods, SeraphsWings, StarMadeCrown, TheKing, LiquidGold, CrushedRosePetals, LivingThrone, BeaklessVultures, Ash, Static_card, CounterfeitVictory, WhiteFlames, Vengeance, DisappearingCorpses, BluntThorns, ForsakenCrowd, RealityPen, AstralRailroad, SubwayTower, SpinningPavilion, Elevator, Grey, Dusk];
 
 // functions
+    //vars
+    let cardCount = 0;
 
     // Card gen
 function genOneCard() {
     let rand = Math.floor(Math.random() * 24)+1;
     
-    return oracleDeckArr[rand];
+    return rand;
 }
 
-function displayCard() {
-    var generatedCard = genOneCard();
+function GetCard(num) {
+    return oracleDeckArr[num];
+}
+
+function displayCard(index) {
+    var generatedCard = GetCard(index);
+
+    // this just resets the anim
+    let codex = document.getElementById("ct_CardCodex");
+    codex.style.animationName = "none";
+    requestAnimationFrame(() => {
+        setTimeout(() => {
+            codex.style.animationName = ""
+        }, 0);
+    });
 
     document.getElementById("cardName").innerHTML = "<h1>" + generatedCard.name + "</h1>";
     document.getElementById("cardDesc").innerHTML = generatedCard.description;
     document.getElementById("cardKeywords").innerHTML = "Keywords: " + generatedCard.keywords;
-    document.getElementById("cardImg").innerHTML = "<img src=\"" + generatedCard.face_src + "\" style=\"width:100%\">"
+    document.getElementById("cardImg").innerHTML = "<img src=\"" + generatedCard.face_src + "\">";
+}
 
-    cardReadOn();
+function AddCardToTable() {
+    if (cardCount < 10) {
+        let cardList = document.getElementById("ct_cardList");
+        var cardIndex = genOneCard();
+
+        cardList.innerHTML += "<div class=\"interactableCard\" cardID =" + cardIndex.toString() + "> <img src=\"ASSETS/OracleDeck/0_BACK.png\"></div>";
+
+        const allCards = document.getElementsByClassName("interactableCard");
+        let latestCard = allCards[allCards.length - 1];
+
+        for (let i=0; i < allCards.length; i++) {
+            allCards[i].addEventListener("contextmenu", OpenCard);
+            allCards[i].addEventListener("mousedown", StartDrag);
+        }
+
+        cardCount++;
+    }
+}
+
+function EmptyTable() {
+    ChangeCirrusSmallChat("The table's all cleared.");
+
+    let cardList = document.getElementById("ct_cardList");
+    cardList.innerHTML = "";
+
+    document.getElementById("cardName").innerHTML = "";
+    document.getElementById("cardDesc").innerHTML = "<p>Click the button on the upper left to pull a card from the oracle deck! You can drag cards into whatever formation you'd like. To open a card, right click it.</p>";
+    document.getElementById("cardKeywords").innerHTML = "<p>Keywords: <i>The gist of the card's meaning will be written here.</i></p>";
+    document.getElementById("cardImg").innerHTML = "<img src=\"ASSETS/OracleDeck/0_BACK.png\">";
+}
+
+function OpenCard(e) {
+    e.preventDefault(); 
+
+    var index = e.currentTarget.getAttribute("cardID");
+    let generatedCard = GetCard(index);
+    e.currentTarget.innerHTML = "<img src=\"" + generatedCard.face_src + "\">";
+
+    displayCard(index);
+}
+
+    // card dragging
+let isDragging = false;
+let offsetX = 0, offsetY = 0;
+let selectedCard = null;
+
+function StartDrag(e) {
+    e.preventDefault();
+    selectedCard = e.currentTarget;
+
+    isDragging = true;
+    offsetX = e.clientX - selectedCard.offsetLeft;
+    offsetY = e.clientY - selectedCard.offsetTop;
+
+    document.addEventListener("mousemove", DragCardMove);
+    document.addEventListener("mouseup", EndDrag);
+}
+
+function DragCardMove(e) {
+    if (selectedCard) {
+        e.preventDefault();
+
+        if (isDragging) {
+            selectedCard.style.left = `${e.clientX - offsetX}px`;
+            selectedCard.style.top = `${e.clientY - offsetY}px`;
+        }
+    }
+}
+
+function EndDrag() {
+    if (selectedCard) {
+
+        isDragging = false;
+
+        document.removeEventListener("mousemove", DragCardMove);
+        document.removeEventListener("mouseup", EndDrag);
+
+        selectedCard = null;
+    }
 }
 
     // Talking
 function talkToCirrus() {
     cardReadOff();
     proceed(1);
+}
+
+function ChangeCirrusSmallChat(newChat) {
+    let cirrusDialogue = document.getElementById("cirrusSmallChat");
+    cirrusDialogue.innerHTML = "[<b> Cirrus: </b><i>\"" + newChat + "\" </i>]";
 }
 
 function proceed(value) {
@@ -255,11 +354,20 @@ function changeText(cirrus, opt1, opt2, opt1Val, opt2Val) {
 }
 
 function cardReadOn() {
+    ChangeCirrusSmallChat("Care for a reading?");
+
     document.getElementById("readingContent").classList.remove("HIDETHIS");
     document.getElementById("talkingContent").classList.add("HIDETHIS");
 }
 
 function cardReadOff() {
+    ChangeCirrusSmallChat("Hehe...");
+
     document.getElementById("readingContent").classList.add("HIDETHIS");
     document.getElementById("talkingContent").classList.remove("HIDETHIS");
 }
+
+// event
+document.addEventListener("mouseup", () => {
+        isDragging = false;
+    });
